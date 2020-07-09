@@ -1,9 +1,0 @@
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\Reporting">
-        <plugin name="sales_grid_collection" type="\Fidesio\DonateService\Plugin\Sales\Order\Grid"/>
-    </type>
-    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
-        <plugin name="sales_invoice_additional_columns" type="Fidesio\DonateService\Plugin\Sales\Invoice\Grid" sortOrder="10" disabled="false" />
-    </type>
-</config>

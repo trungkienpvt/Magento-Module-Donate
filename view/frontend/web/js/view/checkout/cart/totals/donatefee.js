@@ -1,6 +1,6 @@
 define(
     [
-        'Fidesio_Donate/js/view/checkout/summary/donatefee'
+        'Fidesio_DonateService/js/view/checkout/summary/donatefee'
     ],
     function (Component) {
         'use strict';

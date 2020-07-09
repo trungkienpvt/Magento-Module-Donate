@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="product.info.form.options">
-            <block class="Fidesio\DonateService\Block\Donation" name="donation.product.detail" template="Fidesio_Donate::donate.phtml"/>
+            <block class="Fidesio\DonateService\Block\Donation" name="donation.product.detail" template="Fidesio_DonateService::donate.phtml"/>
         </referenceContainer>
     </body>
     <move element="donation.product.detail" destination="product.info.form.options" before="product.info.options.wrapper"/>

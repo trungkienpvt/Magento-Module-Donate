@@ -1,7 +1,7 @@
 <?php
 
 namespace Fidesio\DonateService\Model\Invoice\Total;
-class DonateFee extends \Magento\Quote\Model\Quote\Address\Total\AbstractTotal
+class DonateFee extends \Magento\Sales\Model\Order\Total\AbstractTotal
 {
     /**
      * Collect grand total address amount

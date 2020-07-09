@@ -21,7 +21,7 @@ class DonateFee extends \Magento\Sales\Model\Order\Total\AbstractTotal
     public function collect(
         \Magento\Quote\Model\Quote $quote,
         \Magento\Quote\Api\Data\ShippingAssignmentInterface $shippingAssignment,
-        \Magento\Quote\Model\Quote\Address\Total $total
+        \Magento\Sales\Model\Order\Total $total
     )
     {
         parent::collect($quote, $shippingAssignment, $total);

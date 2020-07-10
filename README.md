@@ -28,3 +28,5 @@ $ bin/magento cache:clean
 * [Module custom fee](https://github.com/sivajik34/Custom-Fee-Magento2/tree/master/Sivajik34/CustomFee)
 
 * [webkul](https://webkul.com/blog/add-custom-pricefee-order-total-magento2/)
+
+* [Filter admin order grid](https://github.com/mageworx/articles-extended-orders-grid)

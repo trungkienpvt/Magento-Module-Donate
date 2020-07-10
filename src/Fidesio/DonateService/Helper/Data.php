@@ -11,6 +11,16 @@ use Fidesio\DonateService\Model\Config\Backend\Image as DonateImage;
 
 class Data extends AbstractHelper
 {
+
+    /**
+     * Custom fee config path
+     */
+    const CONFIG_CUSTOM_IS_ENABLED = 'donatefee/donatefee/status';
+    const CONFIG_CUSTOM_FEE = 'donatefee/donatefee/amounts';
+    const CONFIG_FEE_LABEL = 'donatefee/donatefee/title';
+    const CONFIG_FEE_DESCRIPTION = 'donatefee/donatefee/description';
+    const CONFIG_FEE_IMAGE = 'donatefee/donatefee/image';
+
     protected $storeManager;
     protected $urlInterface;
     protected $scopeConfig;
@@ -38,9 +48,52 @@ class Data extends AbstractHelper
 
     }
 
+    /**
+     * @return mixed
+     */
+    public function isModuleEnabled()
+    {
+
+        $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+        $isEnabled = $this->scopeConfig->getValue(self::CONFIG_CUSTOM_IS_ENABLED, $storeScope);
+        return $isEnabled;
+    }
+
+    /**
+     * Get custom fee
+     *
+     * @return mixed
+     */
+    public function getdonatefee()
+    {
+        $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+        $fee = $this->scopeConfig->getValue(self::CONFIG_CUSTOM_FEE, $storeScope);
+        return $fee;
+    }
+
+    /**
+     * Get custom fee
+     *
+     * @return mixed
+     */
+    public function getFeeLabel()
+    {
+        $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+        $feeLabel = $this->scopeConfig->getValue(self::CONFIG_FEE_LABEL, $storeScope);
+        return $feeLabel;
+    }
+
+    public function getFeeDescription()
+    {
+        $storeScope = \Magento\Store\Model\ScopeInterface::SCOPE_STORE;
+        $feeDescription = $this->scopeConfig->getValue(self::CONFIG_FEE_DESCRIPTION, $storeScope);
+        return $feeDescription;
+    }
+
+
     public function getAmountFromConfig()
     {
-        $amount = json_decode($this->scopeConfig->getValue('fidesio_donate_section/fidesio_donate_dynamic_config/amounts'));
+        $amount = json_decode($this->scopeConfig->getValue(self::CONFIG_CUSTOM_FEE));
         $arrReturn = [];
         if (!empty($amount)) {
             foreach ((array)($amount) as $item) {
@@ -54,17 +107,12 @@ class Data extends AbstractHelper
 
     public function getImageFromConfig()
     {
-        $image = $this->scopeConfig->getValue('fidesio_donate_section/fidesio_donate_dynamic_config/upload_image_id');
+        $image = $this->scopeConfig->getValue(self::CONFIG_FEE_IMAGE);
         if (!empty($image))
             return $this->urlInterface->getBaseUrl() . 'media/' . DonateImage::UPLOAD_DIR . '/' . $image;
 
     }
 
-    public function getDescriptionFromConfig()
-    {
-        $description = $this->scopeConfig->getValue('fidesio_donate_section/fidesio_donate_dynamic_config/editor_textarea');
-        return $description;
-    }
 
     public function getCurrentCurrencyCode()
     {

@@ -45,7 +45,7 @@ class Donation extends Template
 
     }
     public function getDescriptionFromConfig() {
-        return $this->helper->getDescriptionFromConfig();
+        return $this->helper->getFeeDescription();
     }
 
     public function getCurrentCurrency() {

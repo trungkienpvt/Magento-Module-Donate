@@ -1,26 +1,23 @@
 <?php
 
-namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice;
+namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Creditmemo;
 
 class Totals extends \Magento\Framework\View\Element\Template
 {
-
-    /**
-     * @var \Fidesio\DonateService\Helper\Data
-     */
-    protected $_dataHelper;
-
     /**
      * Order invoice
      *
-     * @var \Magento\Sales\Model\Order\Invoice|null
+     * @var \Magento\Sales\Model\Order\Creditmemo|null
      */
-    protected $_invoice = null;
+    protected $_creditmemo = null;
 
     /**
      * @var \Magento\Framework\DataObject
      */
     protected $_source;
+
+
+    protected $_dataHelper;
 
     /**
      * OrderFee constructor.
@@ -29,7 +26,7 @@ class Totals extends \Magento\Framework\View\Element\Template
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+         \Fidesio\DonateService\Helper\Data $dataHelper,
         array $data = []
     ) {
         $this->_dataHelper = $dataHelper;
@@ -46,9 +43,9 @@ class Totals extends \Magento\Framework\View\Element\Template
         return $this->getParentBlock()->getSource();
     }
 
-    public function getInvoice()
+    public function getCreditmemo()
     {
-        return $this->getParentBlock()->getInvoice();
+        return $this->getParentBlock()->getCreditmemo();
     }
     /**
      * Initialize payment fee totals
@@ -57,23 +54,24 @@ class Totals extends \Magento\Framework\View\Element\Template
      */
     public function initTotals()
     {
-
         $this->getParentBlock();
-        $this->getInvoice();
+        $this->getCreditmemo();
         $this->getSource();
 
         if(!$this->getSource()->getDonatefee()) {
             return $this;
         }
-        $total = new \Magento\Framework\DataObject(
+        $fee = new \Magento\Framework\DataObject(
             [
                 'code' => 'donatefee',
+                'strong' => false,
                 'value' => $this->getSource()->getDonatefee(),
                 'label' => $this->_dataHelper->getFeeLabel(),
             ]
         );
 
-        $this->getParentBlock()->addTotalBefore($total, 'grand_total');
+        $this->getParentBlock()->addTotalBefore($fee, 'grand_total');
+
         return $this;
     }
 }

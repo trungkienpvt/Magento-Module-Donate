@@ -43,7 +43,8 @@ class InstallSchema implements InstallSchemaInterface
             'sales_order_grid',
             'quote',
             'quote_address',
-            'quote_item'
+            'quote_item',
+            'sales_creditmemo'
         ];
         foreach ($columns as $name => $definition) {
 
@@ -54,18 +55,6 @@ class InstallSchema implements InstallSchemaInterface
             }
 
         }
-
-//        $setup->getConnection()->addColumn(
-//            $setup->getTable('catalog_product_option_type_value'),
-//            'description',
-//            [
-//                'type'     => \Magento\Framework\DB\Ddl\Table::TYPE_DECIMAL,
-//                'nullable' => true,
-//                '10,2',
-//                'default' => 0.00,
-//                'comment' => 'Donate fee',
-//            ]
-//        );
 
         $installer->endSetup();
     }

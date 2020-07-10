@@ -1,65 +1,64 @@
 <?php
 
-namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice;
+namespace Fidesio\DonateService\Block\Adminhtml\Sales;
 
 class Totals extends \Magento\Framework\View\Element\Template
 {
 
-    /**
-     * @var \Fidesio\DonateService\Helper\Data
-     */
     protected $_dataHelper;
 
-    /**
-     * Order invoice
-     *
-     * @var \Magento\Sales\Model\Order\Invoice|null
-     */
-    protected $_invoice = null;
 
     /**
-     * @var \Magento\Framework\DataObject
+     * @var \Magento\Directory\Model\Currency
      */
-    protected $_source;
+    protected $_currency;
 
-    /**
-     * OrderFee constructor.
-     * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param array $data
-     */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Magento\Directory\Model\Currency $currency,
         array $data = []
     ) {
-        $this->_dataHelper = $dataHelper;
         parent::__construct($context, $data);
+        $this->_dataHelper = $dataHelper;
+        $this->_currency = $currency;
     }
 
     /**
-     * Get data (totals) source model
+     * Retrieve current order model instance
      *
-     * @return \Magento\Framework\DataObject
+     * @return \Magento\Sales\Model\Order
+     */
+    public function getOrder()
+    {
+        return $this->getParentBlock()->getOrder();
+    }
+
+    /**
+     * @return mixed
      */
     public function getSource()
     {
         return $this->getParentBlock()->getSource();
     }
 
-    public function getInvoice()
-    {
-        return $this->getParentBlock()->getInvoice();
-    }
     /**
-     * Initialize payment fee totals
+     * @return string
+     */
+    public function getCurrencySymbol()
+    {
+        return $this->_currency->getCurrencySymbol();
+    }
+
+    /**
+     *
      *
      * @return $this
      */
     public function initTotals()
     {
-
         $this->getParentBlock();
-        $this->getInvoice();
+        $this->getOrder();
         $this->getSource();
 
         if(!$this->getSource()->getDonatefee()) {
@@ -72,8 +71,8 @@ class Totals extends \Magento\Framework\View\Element\Template
                 'label' => $this->_dataHelper->getFeeLabel(),
             ]
         );
-
         $this->getParentBlock()->addTotalBefore($total, 'grand_total');
+
         return $this;
     }
 }

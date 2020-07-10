@@ -16,6 +16,7 @@ class AddDonateFee implements ObserverInterface
 {
     protected $_request;
 
+    protected $_helper;
     /**
      * @param RequestInterface $request
      */

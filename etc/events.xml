@@ -9,5 +9,8 @@
     <event name="sales_quote_remove_item">
         <observer name="remove_donatefee" instance="Fidesio\DonateService\Observer\Cart\Item\RemoveDonateFee" />
     </event>
+    <event name="checkout_submit_all_after">
+        <observer name="fidesio_checkout_submit_all_after" instance="Fidesio\DonateService\Observer\OrderObserver" />
+    </event>
 
 </config>

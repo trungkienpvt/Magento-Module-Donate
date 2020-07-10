@@ -7,7 +7,7 @@
 -->
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <columns name="sales_order_invoice_columns">
-        <column name="donatefee">
+        <column name="donatefee" class="Magento\Sales\Ui\Component\Listing\Column\PurchasedPrice">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="visible" xsi:type="boolean">true</item>

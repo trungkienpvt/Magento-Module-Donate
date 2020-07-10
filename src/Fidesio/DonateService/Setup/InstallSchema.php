@@ -37,10 +37,7 @@ class InstallSchema implements InstallSchemaInterface
         $connection = $installer->getConnection();
         $arrayTable = [
             'sales_invoice',
-            'sales_invoice_grid',
             'sales_order',
-            'sales_order_item',
-            'sales_order_grid',
             'quote',
             'quote_address',
             'quote_item',

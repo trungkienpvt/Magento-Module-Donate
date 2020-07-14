@@ -11,6 +11,14 @@
     "php": ">=7.1.0"
 
   },
+  "keywords": [
+    "Example donate",
+    "Custom fee",
+    "Magento 2",
+    "Donate fee",
+    "Example module"
+
+  ],
   "authors": [
     {
       "name": "Trung Kien",

@@ -9,7 +9,7 @@
   ],
   "require": {
     "php": ">=7.1.0",
-    "trungkienpvt/donate_service": "dev-master"
+    "trungkienpvt/donate_service": "2.0.0"
   },
   "authors": [
     {

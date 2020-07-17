@@ -2,7 +2,7 @@
   "name": "trungkienpvt/donate_service",
   "description": "A Magento 2 module that add donate fee to checkout",
   "type": "magento2-module",
-  "version": "2.0.0",
+  "version": "dev-master",
   "license": [
     "OSL-3.0",
     "AFL-3.0"

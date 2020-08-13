@@ -22,8 +22,7 @@ class Collection extends OriginalCollection
         EventManager $eventManager,
         $mainTable = 'sales_order_grid',
         $resourceModel = \Magento\Sales\Model\ResourceModel\Order::class
-    )
-    {
+    ) {
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $mainTable, $resourceModel);
     }
 

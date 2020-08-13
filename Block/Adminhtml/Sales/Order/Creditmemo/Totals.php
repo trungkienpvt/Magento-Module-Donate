@@ -26,7 +26,7 @@ class Totals extends \Magento\Framework\View\Element\Template
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-         \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Fidesio\DonateService\Helper\Data $dataHelper,
         array $data = []
     ) {
         $this->_dataHelper = $dataHelper;
@@ -58,7 +58,7 @@ class Totals extends \Magento\Framework\View\Element\Template
         $this->getCreditmemo();
         $this->getSource();
 
-        if(!$this->getSource()->getDonatefee()) {
+        if (!$this->getSource()->getDonatefee()) {
             return $this;
         }
         $fee = new \Magento\Framework\DataObject(

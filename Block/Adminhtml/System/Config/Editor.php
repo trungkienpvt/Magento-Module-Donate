@@ -1,9 +1,11 @@
 <?php
 namespace Fidesio\DonateService\Block\Adminhtml\System\Config;
+
 use Magento\Framework\Registry;
 use Magento\Backend\Block\Template\Context;
 use Magento\Cms\Model\Wysiwyg\Config as WysiwygConfig;
 use Magento\Framework\Data\Form\Element\AbstractElement;
+
 class Editor extends \Magento\Config\Block\System\Config\Form\Field
 {
     /**

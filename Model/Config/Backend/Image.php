@@ -43,5 +43,4 @@ class Image extends \Magento\Config\Model\Config\Backend\Image
     {
         return ['jpg', 'jpeg', 'gif', 'png', 'svg'];
     }
-
 }

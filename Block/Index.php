@@ -20,5 +20,4 @@ class Index extends Template
 
         return $this->_helperData->HelloWorld();
     }
-
 }

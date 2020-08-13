@@ -6,7 +6,8 @@ use Magento\Checkout\Block\Checkout\LayoutProcessor;
 
 class SmsPlugin
 {
-    public function afterProcess(LayoutProcessor $subject, $jsLayout) {
+    public function afterProcess(LayoutProcessor $subject, $jsLayout)
+    {
         $customAttributeCode = 'sms';
         $customField = [
             'component' => 'Magento_Ui/js/form/element/abstract',

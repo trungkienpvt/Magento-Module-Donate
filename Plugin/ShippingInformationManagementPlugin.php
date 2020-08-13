@@ -28,6 +28,5 @@ class ShippingInformationManagementPlugin
             $sms = $shippingAddressExtensionAttributes->getSms();
             $shippingAddress->setSms($sms);
         }
-
     }
 }

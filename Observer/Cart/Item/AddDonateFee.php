@@ -20,7 +20,8 @@ class AddDonateFee implements ObserverInterface
     /**
      * @param RequestInterface $request
      */
-    public function __construct(RequestInterface $request){
+    public function __construct(RequestInterface $request)
+    {
         $this->_request = $request;
     }
 
@@ -29,15 +30,15 @@ class AddDonateFee implements ObserverInterface
 
         $item = $observer->getQuoteItem();
         $quote = $item->getQuote();
-        $additionalOptions = array();
+        $additionalOptions = [];
 
-        if ($additionalOption = $item->getOptionByCode('donatefee')){
+        if ($additionalOption = $item->getOptionByCode('donatefee')) {
             $additionalOptions = (array) unserialize($additionalOption->getValue());
         }
 
         $post = $this->_request->getParam('donatefee');
 
-        if(!empty($post)){
+        if (!empty($post)) {
 
             $additionalOptions[] = [
                 'label' => 'Donate fee',
@@ -45,19 +46,19 @@ class AddDonateFee implements ObserverInterface
             ];
         }
 
-        if(count($additionalOptions) > 0){
-            $item->addOption(array(
+        if (count($additionalOptions) > 0) {
+            $item->addOption([
                 'product_id' => $item->getProductId(),//Missing data
                 'code' => 'donatefee',
                 'value' => serialize($additionalOptions)
-            ));
+            ]);
         }
 
         $items = $quote->getAllItems();
         $totalDonateFee = 0;
         foreach ($items as $i) {
             $additionalOption = $i->getOptionByCode('donatefee');
-            if(!empty($additionalOption)) {
+            if (!empty($additionalOption)) {
                 $additionalOptionValue = unserialize($additionalOption->getValue());
                 $donateFee = $additionalOptionValue[0]['value'];
                 $totalDonateFee += $donateFee;
@@ -69,5 +70,4 @@ class AddDonateFee implements ObserverInterface
         $quote->setDonatefee($totalDonateFee);
         return $this;
     }
-
 }

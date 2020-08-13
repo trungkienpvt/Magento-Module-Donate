@@ -59,18 +59,15 @@ class OrderObserver implements ObserverInterface
     {
         $orderId = $observer->getEvent()->getOrder()->getId();
         $this->createInvoice($orderId);
-
     }
 
     protected function createInvoice($orderId)
     {
-        try
-        {
+        try {
             $order = $this->_orderRepository->get($orderId);
-            if ($order)
-            {
+            if ($order) {
                 $invoices = $this->_invoiceCollectionFactory->create()
-                    ->addAttributeToFilter('order_id', array('eq' => $order->getId()));
+                    ->addAttributeToFilter('order_id', ['eq' => $order->getId()]);
 
                 $invoices->getSelect()->limit(1);
 
@@ -80,7 +77,7 @@ class OrderObserver implements ObserverInterface
                     return $invoice;
                 }
 
-                if(!$order->canInvoice()) {
+                if (!$order->canInvoice()) {
                     return null;
                 }
 

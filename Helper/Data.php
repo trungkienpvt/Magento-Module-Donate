@@ -36,8 +36,7 @@ class Data extends AbstractHelper
         \Magento\Directory\Model\Currency $currency,
         Cart $cart,
         ProductFactory $productFactory
-    )
-    {
+    ) {
         $this->productFactory = $productFactory;
         $this->cart = $cart;
         $this->storeManager = $storeManager;
@@ -45,7 +44,6 @@ class Data extends AbstractHelper
         $this->scopeConfig = $scopeConfig;
         $this->currency = $currency;
         parent::__construct($context);
-
     }
 
     /**
@@ -97,20 +95,19 @@ class Data extends AbstractHelper
         $arrReturn = [];
         if (!empty($amount)) {
             foreach ((array)($amount) as $item) {
-                $arrReturn[] = array('value' => $item->amounts, 'label' => $item->amounts);
+                $arrReturn[] = ['value' => $item->amounts, 'label' => $item->amounts];
             }
             return ($arrReturn);
         }
         return false;
-
     }
 
     public function getImageFromConfig()
     {
         $image = $this->scopeConfig->getValue(self::CONFIG_FEE_IMAGE);
-        if (!empty($image))
+        if (!empty($image)) {
             return $this->urlInterface->getBaseUrl() . 'media/' . DonateImage::UPLOAD_DIR . '/' . $image;
-
+        }
     }
 
 
@@ -130,8 +127,8 @@ class Data extends AbstractHelper
 
         $cart = $this->cart;
 
-        $params = array();
-        $options = array();
+        $params = [];
+        $options = [];
         $params['qty'] = 1;
         $params['product'] = $productId;
 
@@ -145,7 +142,5 @@ class Data extends AbstractHelper
         $params['options'] = $options;
         $cart->addProduct($product, $params);
         $cart->save();
-
-
     }
 }

@@ -1,7 +1,6 @@
 <?php
 namespace Fidesio\DonateService\Plugin\DonateFee;
 
-
 class CollectionFactory
 {
 
@@ -9,8 +8,7 @@ class CollectionFactory
         \Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory $subject,
         \Closure $proceed,
         $requestName
-    )
-    {
+    ) {
         $result = $proceed($requestName);
         if ($requestName == 'sales_order_grid_data_source') {
             if ($result instanceof \Magento\Sales\Model\ResourceModel\Order\Grid\Collection) {
@@ -29,7 +27,8 @@ class CollectionFactory
                     ->joinLeft(
                         ['mss' => $result->getTable('magestore_storepickup_store')],
                         "mss.storepickup_id = au.storepickup_id",
-                        [])
+                        []
+                    )
                 ;
             }
         }

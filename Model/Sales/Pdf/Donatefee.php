@@ -11,8 +11,7 @@ class Donatefee extends \Magento\Sales\Model\Order\Pdf\Total\DefaultTotal
         \Magento\Tax\Model\ResourceModel\Sales\Order\Tax\CollectionFactory $ordersFactory,
         \Fidesio\DonateService\Helper\Data $dataHelper,
         array $data = []
-    )
-    {
+    ) {
         $this->_dataHelper = $dataHelper;
         parent::__construct($taxHelper, $taxCalculation, $ordersFactory, $data);
     }

@@ -8,7 +8,7 @@ use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\UpgradeDataInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 
-class UpgradeData implements  UpgradeDataInterface
+class UpgradeData implements UpgradeDataInterface
 {
     private $customerSetupFactory;
 
@@ -16,8 +16,10 @@ class UpgradeData implements  UpgradeDataInterface
     {
         $this->customerSetupFactory = $customerSetupFactory;
     }
-    public function upgrade(ModuleDataSetupInterface $setup,
-                            ModuleContextInterface $context){
+    public function upgrade(
+        ModuleDataSetupInterface $setup,
+        ModuleContextInterface $context
+    ) {
         $setup->startSetup();
 
         /** @var CustomerSetup $customerSetup */

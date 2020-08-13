@@ -1,8 +1,6 @@
 <?php
 namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice;
 
-
-
 class Donatefee extends \Magento\Framework\View\Element\Template
 {
     protected $_config;
@@ -66,7 +64,5 @@ class Donatefee extends \Magento\Framework\View\Element\Template
         );
         $parent->addTotal($fee, 'donatefee');
         return $this;
-
     }
-
 }

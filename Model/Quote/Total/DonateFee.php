@@ -1,6 +1,7 @@
 <?php
 
 namespace Fidesio\DonateService\Model\Quote\Total;
+
 class DonateFee extends \Magento\Quote\Model\Quote\Address\Total\AbstractTotal
 {
     /**
@@ -22,8 +23,7 @@ class DonateFee extends \Magento\Quote\Model\Quote\Address\Total\AbstractTotal
         \Magento\Quote\Model\Quote $quote,
         \Magento\Quote\Api\Data\ShippingAssignmentInterface $shippingAssignment,
         \Magento\Quote\Model\Quote\Address\Total $total
-    )
-    {
+    ) {
         parent::collect($quote, $shippingAssignment, $total);
 
 

@@ -62,7 +62,7 @@ class Totals extends \Magento\Framework\View\Element\Template
         $this->getInvoice();
         $this->getSource();
 
-        if(!$this->getSource()->getDonatefee()) {
+        if (!$this->getSource()->getDonatefee()) {
             return $this;
         }
         $total = new \Magento\Framework\DataObject(

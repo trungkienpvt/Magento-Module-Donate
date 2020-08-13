@@ -3,7 +3,6 @@ namespace Fidesio\DonateService\Plugin\Quote\Item;
 
 use Magento\Framework\Serialize\SerializerInterface;
 
-
 class QuoteItemToOrderItemPlugin
 {
 
@@ -18,5 +17,4 @@ class QuoteItemToOrderItemPlugin
         $orderItem->setDonatefee($item->getDonatefee());
         return $orderItem;
     }
-
 }

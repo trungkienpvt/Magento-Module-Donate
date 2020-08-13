@@ -24,8 +24,9 @@ class DonateAmount
         $result = $proceed($method, $vars);
         if ($method == 'setDonate' && $subject->getExtensionAttributes()) {
             $amountValue = $subject->getExtensionAttributes()->getDonate();
-            if (!empty($amountValue))
+            if (!empty($amountValue)) {
                 $subject->setDonate($subject->getExtensionAttributes()->getDonate());
+            }
         }
         return $result;
     }

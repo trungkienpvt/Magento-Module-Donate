@@ -24,7 +24,7 @@ class RemoveDonateFee implements ObserverInterface
         $totalDonateFee = 0;
         foreach ($items as $i) {
             $additionalOption = $i->getOptionByCode('donatefee');
-            if(!empty($additionalOption)) {
+            if (!empty($additionalOption)) {
                 $additionalOptionValue = unserialize($additionalOption->getValue());
                 $donateFee = $additionalOptionValue[0]['value'];
                 $totalDonateFee += $donateFee;
@@ -36,5 +36,4 @@ class RemoveDonateFee implements ObserverInterface
         $quote->setDonatefee($totalDonateFee);
         return $this;
     }
-
 }

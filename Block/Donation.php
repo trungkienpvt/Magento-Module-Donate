@@ -7,6 +7,7 @@ use \Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\Model\StoreManagerInterface;
 use Fidesio\DonateService\Model\Config\Backend\Image as DonateImage;
+
 class Donation extends Template
 {
 
@@ -17,15 +18,14 @@ class Donation extends Template
     protected $helper;
 
     public function __construct(
-        Context $context, array $data = [],
+        Context $context,
+        array $data = [],
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\UrlInterface $urlInterface,
         \Fidesio\DonateService\Helper\Data $helper
+    ) {
 
-    )
-
-    {
         parent::__construct($context, $data);
         $this->storeManager = $storeManager;
         $this->urlInterface = $urlInterface;
@@ -36,25 +36,23 @@ class Donation extends Template
     public function getAmountFromConfig()
     {
         return $this->helper->getAmountFromConfig();
-
     }
 
     public function getImageFromConfig()
     {
         return $this->helper->getImageFromConfig();
-
     }
-    public function getDescriptionFromConfig() {
+    public function getDescriptionFromConfig()
+    {
         return $this->helper->getFeeDescription();
     }
 
-    public function getCurrentCurrency() {
+    public function getCurrentCurrency()
+    {
         return $this->helper->getCurrentCurrencyCode();
     }
-    public function getCurrentCurrencySymbol() {
+    public function getCurrentCurrencySymbol()
+    {
         return $this->helper->getCurrentCurrencySymbol();
     }
-
-
-
 }

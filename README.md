@@ -16,7 +16,7 @@ Example module to add custom fee effect on work flow checkout
 
 Run the following command lines below
 ```sh
-$ composer require trungkienpvt/donate_service
+$ composer require trungkienpvt/donate_service:dev-master 
 $ bin/magento setup:upgrade
 $ bin/magento cache:clean
 ```

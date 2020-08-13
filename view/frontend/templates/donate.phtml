@@ -42,12 +42,16 @@ $currentCurrencySymbol = $block->getCurrentCurrencySymbol();
     </div>
     <div class="amount-select">
         <select name='donatefee' class='form-control'>
-            <?php foreach ($amount as $option) {
-                if ($option['value'] == '') { ?>
-                    <option value="">Please select Amount</option>
-                <?php } else { ?>
-                    <option value="<?php echo $option['value'] ?>"><?php print($currentCurrencySymbol)?><?php echo $option['label'] ?></option>
-                <?php }} ?>
+            <?php if(!empty($amount)):?>
+                <?php foreach ($amount as $option) {
+                    if ($option['value'] == '') { ?>
+                        <option value="">Please select Amount</option>
+                    <?php } else { ?>
+                        <option value="<?php echo $option['value'] ?>"><?php print($currentCurrencySymbol)?><?php echo $option['label'] ?></option>
+                    <?php }} ?>
+
+            <?php endif;?>
+
         </select>
     </div>
 </div>

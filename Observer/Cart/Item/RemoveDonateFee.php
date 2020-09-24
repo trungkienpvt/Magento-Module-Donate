@@ -7,7 +7,7 @@
  * @author      Webkul Software Private Limited
  *
  */
-namespace Fidesio\DonateService\Observer\Cart\Item;
+namespace Dev69\DonateService\Observer\Cart\Item;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\App\RequestInterface;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Fidesio\DonateService\Block\Adminhtml\Form\Field;
+namespace Dev69\DonateService\Block\Adminhtml\Form\Field;
 
 use Magento\Framework\View\Element\Html\Select;
 

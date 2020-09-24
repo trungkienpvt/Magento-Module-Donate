@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Model\Invoice\Total;
+namespace Dev69\DonateService\Model\Invoice\Total;
 
 use Magento\Sales\Model\Order\Invoice\Total\AbstractTotal;
 

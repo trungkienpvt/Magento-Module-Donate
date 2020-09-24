@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Model\Sales\Pdf;
+namespace Dev69\DonateService\Model\Sales\Pdf;
 
 class Donatefee extends \Magento\Sales\Model\Order\Pdf\Total\DefaultTotal
 {
@@ -9,7 +9,7 @@ class Donatefee extends \Magento\Sales\Model\Order\Pdf\Total\DefaultTotal
         \Magento\Tax\Helper\Data $taxHelper,
         \Magento\Tax\Model\Calculation $taxCalculation,
         \Magento\Tax\Model\ResourceModel\Sales\Order\Tax\CollectionFactory $ordersFactory,
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Dev69\DonateService\Helper\Data $dataHelper,
         array $data = []
     ) {
         $this->_dataHelper = $dataHelper;

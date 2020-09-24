@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Plugin;
+namespace Dev69\DonateService\Plugin;
 
 use Magento\Checkout\Block\Checkout\LayoutProcessor;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Fidesio\DonateService\Helper;
+namespace Dev69\DonateService\Helper;
 
 use \Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Checkout\Model\Cart;
 use Magento\Catalog\Model\ProductFactory;
-use Fidesio\DonateService\Model\Config\Backend\Image as DonateImage;
+use Dev69\DonateService\Model\Config\Backend\Image as DonateImage;
 
 class Data extends AbstractHelper
 {

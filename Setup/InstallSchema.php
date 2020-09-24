@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Setup;
+namespace Dev69\DonateService\Setup;
 
 use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;

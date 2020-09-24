@@ -1,12 +1,12 @@
 <?php
-namespace Fidesio\DonateService\Model;
+namespace Dev69\DonateService\Model;
 
 use Magento\Checkout\Model\ConfigProviderInterface;
 
 class DonateFeeConfigProvider implements ConfigProviderInterface
 {
     /**
-     * @var \Fidesio\DonateService\Helper\Data
+     * @var \Dev69\DonateService\Helper\Data
      */
     protected $dataHelper;
 
@@ -21,12 +21,12 @@ class DonateFeeConfigProvider implements ConfigProviderInterface
     protected $logger;
 
     /**
-     * @param \Fidesio\DonateService\Helper\Data $dataHelper
+     * @param \Dev69\DonateService\Helper\Data $dataHelper
      * @param \Magento\Checkout\Model\Session $checkoutSession
      * @param \Psr\Log\LoggerInterface $logger
      */
     public function __construct(
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Dev69\DonateService\Helper\Data $dataHelper,
         \Magento\Checkout\Model\Session $checkoutSession,
         \Psr\Log\LoggerInterface $logger
     ) {

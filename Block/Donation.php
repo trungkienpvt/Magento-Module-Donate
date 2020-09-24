@@ -1,12 +1,12 @@
 <?php
 
-namespace Fidesio\DonateService\Block;
+namespace Dev69\DonateService\Block;
 
-use \Fidesio\DonateService\Helper\Data;
+use \Dev69\DonateService\Helper\Data;
 use \Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\Model\StoreManagerInterface;
-use Fidesio\DonateService\Model\Config\Backend\Image as DonateImage;
+use Dev69\DonateService\Model\Config\Backend\Image as DonateImage;
 
 class Donation extends Template
 {
@@ -23,7 +23,7 @@ class Donation extends Template
         \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\UrlInterface $urlInterface,
-        \Fidesio\DonateService\Helper\Data $helper
+        \Dev69\DonateService\Helper\Data $helper
     ) {
 
         parent::__construct($context, $data);

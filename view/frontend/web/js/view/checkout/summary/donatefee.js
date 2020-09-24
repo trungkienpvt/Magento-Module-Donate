@@ -11,7 +11,7 @@ define(
         return Component.extend({
             defaults: {
                 isFullTaxSummaryDisplayed: window.checkoutConfig.isFullTaxSummaryDisplayed || false,
-                template: 'Fidesio_DonateService/checkout/summary/donatefee'
+                template: 'Dev69_DonateService/checkout/summary/donatefee'
             },
             totals: quote.getTotals(),
             isTaxDisplayedInGrandTotal: window.checkoutConfig.includeTaxInGrandTotal || false,

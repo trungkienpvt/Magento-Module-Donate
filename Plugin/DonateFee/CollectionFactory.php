@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Plugin\DonateFee;
+namespace Dev69\DonateService\Plugin\DonateFee;
 
 class CollectionFactory
 {

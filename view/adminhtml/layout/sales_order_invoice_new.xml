@@ -9,7 +9,7 @@
 
     <body>
         <referenceContainer name="invoice_totals">
-            <block class="Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice\Donatefee" name="donatefee"/>
+            <block class="Dev69\DonateService\Block\Adminhtml\Sales\Order\Invoice\Donatefee" name="donatefee"/>
         </referenceContainer>
     </body>
 </page>

@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Block\Adminhtml\System\Config;
+namespace Dev69\DonateService\Block\Adminhtml\System\Config;
 
 use Magento\Framework\Registry;
 use Magento\Backend\Block\Template\Context;

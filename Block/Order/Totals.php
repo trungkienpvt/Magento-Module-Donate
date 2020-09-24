@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Block\Order;
+namespace Dev69\DonateService\Block\Order;
 
 class Totals extends \Magento\Framework\View\Element\AbstractBlock
 {

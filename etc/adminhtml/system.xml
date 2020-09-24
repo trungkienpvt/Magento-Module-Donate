@@ -8,7 +8,7 @@
             <class>separator-top</class>
             <label>Donate</label>
             <tab>fidesio_donate</tab>
-            <resource>Fidesio_DonateService::default_config</resource>
+            <resource>Dev69_DonateService::default_config</resource>
 
             <group id="donatefee" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
@@ -19,7 +19,7 @@
 
                 <field id="image" translate="label comment" type="image" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Image</label>
-                    <backend_model>Fidesio\DonateService\Model\Config\Backend\Image</backend_model>
+                    <backend_model>Dev69\DonateService\Model\Config\Backend\Image</backend_model>
                     <base_url type="media" scope_info="1">icon_donate</base_url>
                     <upload_dir config="system" scope_info="1">icon_donate</upload_dir>
                     <comment>Image for donation(Allow: jpeg, jpg, gif, png</comment>
@@ -30,11 +30,11 @@
                 </field>
                 <field id="description" translate="label comment" sortOrder="4" type="editor" showInStore="1" showInDefault="1" >
                     <label>Description</label>
-                    <frontend_model>Fidesio\DonateService\Block\Adminhtml\System\Config\Editor</frontend_model>
+                    <frontend_model>Dev69\DonateService\Block\Adminhtml\System\Config\Editor</frontend_model>
                 </field>
                 <field id="amounts" translate="label" sortOrder="5" showInDefault="5" showInWebsite="1" showInStore="1">
                     <label>Amount Options</label>
-                    <frontend_model>Fidesio\DonateService\Block\Adminhtml\Form\Field\Amount</frontend_model>
+                    <frontend_model>Dev69\DonateService\Block\Adminhtml\Form\Field\Amount</frontend_model>
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                 </field>
             </group>

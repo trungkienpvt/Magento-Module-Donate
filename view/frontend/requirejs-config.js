@@ -2,10 +2,10 @@ var config = {
     config: {
         mixins: {
             'Magento_Checkout/js/view/shipping': {
-                'Fidesio_DonateService/js/view/shipping': true
+                'Dev69_DonateService/js/view/shipping': true
             },
             // 'Magento_Checkout/js/action/set-shipping-information': {
-            //     'Fidesio_Donate/js/action/set-shipping-information-mixin': true
+            //     'Dev69_Donate/js/action/set-shipping-information-mixin': true
             // }
         }
     }

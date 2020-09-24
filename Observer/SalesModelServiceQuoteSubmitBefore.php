@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Observer;
+namespace Dev69\DonateService\Observer;
 
 use Magento\Framework\Event\Observer as EventObserver;
 use Magento\Framework\Event\ObserverInterface;

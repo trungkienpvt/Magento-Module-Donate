@@ -1,12 +1,12 @@
 <?php
 
-namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice;
+namespace Dev69\DonateService\Block\Adminhtml\Sales\Order\Invoice;
 
 class Totals extends \Magento\Framework\View\Element\Template
 {
 
     /**
-     * @var \Fidesio\DonateService\Helper\Data
+     * @var \Dev69\DonateService\Helper\Data
      */
     protected $_dataHelper;
 
@@ -29,7 +29,7 @@ class Totals extends \Magento\Framework\View\Element\Template
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Dev69\DonateService\Helper\Data $dataHelper,
         array $data = []
     ) {
         $this->_dataHelper = $dataHelper;

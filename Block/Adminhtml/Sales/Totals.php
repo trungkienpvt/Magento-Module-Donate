@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Block\Adminhtml\Sales;
+namespace Dev69\DonateService\Block\Adminhtml\Sales;
 
 class Totals extends \Magento\Framework\View\Element\Template
 {
@@ -15,7 +15,7 @@ class Totals extends \Magento\Framework\View\Element\Template
 
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Dev69\DonateService\Helper\Data $dataHelper,
         \Magento\Directory\Model\Currency $currency,
         array $data = []
     ) {

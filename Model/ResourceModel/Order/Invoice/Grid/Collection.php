@@ -4,7 +4,7 @@
  * See COPYING.txt for license details.
  */
 
-namespace Fidesio\DonateService\Model\ResourceModel\Order\Invoice\Grid;
+namespace Dev69\DonateService\Model\ResourceModel\Order\Invoice\Grid;
 
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface as FetchStrategy;
 use Magento\Framework\Data\Collection\EntityFactoryInterface as EntityFactory;

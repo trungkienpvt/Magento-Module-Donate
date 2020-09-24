@@ -3,18 +3,18 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="sales_order_grid_data_source" xsi:type="string">Fidesio\DonateService\Model\ResourceModel\Order\Grid\Collection</item>
-                <item name="sales_order_invoice_grid_data_source" xsi:type="string">Fidesio\DonateService\Model\ResourceModel\Order\Invoice\Grid\Collection</item>
+                <item name="sales_order_grid_data_source" xsi:type="string">Dev69\DonateService\Model\ResourceModel\Order\Grid\Collection</item>
+                <item name="sales_order_invoice_grid_data_source" xsi:type="string">Dev69\DonateService\Model\ResourceModel\Order\Invoice\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
-    <type name="Fidesio\DonateService\Model\ResourceModel\Order\Grid\Collection">
+    <type name="Dev69\DonateService\Model\ResourceModel\Order\Grid\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">sales_order_grid</argument>
             <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order</argument>
         </arguments>
     </type>
-    <type name="Fidesio\DonateService\Model\ResourceModel\Order\Invoice\Grid\Collection">
+    <type name="Dev69\DonateService\Model\ResourceModel\Order\Invoice\Grid\Collection">
         <arguments>
             <argument name="mainTable" xsi:type="string">sales_invoice_grid</argument>
             <argument name="resourceModel" xsi:type="string">Magento\Sales\Model\ResourceModel\Order\Invoice</argument>

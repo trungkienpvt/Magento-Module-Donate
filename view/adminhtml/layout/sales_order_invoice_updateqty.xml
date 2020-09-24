@@ -3,7 +3,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="invoice_totals">
-            <block class="Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice\Totals"
+            <block class="Dev69\DonateService\Block\Adminhtml\Sales\Order\Invoice\Totals"
                    name="donatefee" as="donatefee"/>
         </referenceBlock>
     </body>

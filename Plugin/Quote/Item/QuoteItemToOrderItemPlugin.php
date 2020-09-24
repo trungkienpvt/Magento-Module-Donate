@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Plugin\Quote\Item;
+namespace Dev69\DonateService\Plugin\Quote\Item;
 
 use Magento\Framework\Serialize\SerializerInterface;
 

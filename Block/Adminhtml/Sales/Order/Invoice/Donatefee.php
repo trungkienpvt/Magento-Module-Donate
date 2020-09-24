@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Invoice;
+namespace Dev69\DonateService\Block\Adminhtml\Sales\Order\Invoice;
 
 class Donatefee extends \Magento\Framework\View\Element\Template
 {
@@ -11,7 +11,7 @@ class Donatefee extends \Magento\Framework\View\Element\Template
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
         \Magento\Tax\Model\Config $taxConfig,
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Dev69\DonateService\Helper\Data $dataHelper,
         array $data = []
     ) {
         $this->_helper = $dataHelper;

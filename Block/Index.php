@@ -1,10 +1,10 @@
 <?php
-namespace Fidesio\DonateService\Block;
+namespace Dev69\DonateService\Block;
 
 use \Magento\Framework\View\Element\Template;
 use \Magento\Framework\View\Element\Template\Context;
 use \Magento\Store\Model\StoreManagerInterface;
-use Fidesio\DonateService\Helper\Data;
+use Dev69\DonateService\Helper\Data;
 
 class Index extends Template
 {

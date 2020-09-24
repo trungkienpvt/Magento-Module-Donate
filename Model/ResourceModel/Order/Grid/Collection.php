@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Model\ResourceModel\Order\Grid;
+namespace Dev69\DonateService\Model\ResourceModel\Order\Grid;
 
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface as FetchStrategy;
 use Magento\Framework\Data\Collection\EntityFactoryInterface as EntityFactory;

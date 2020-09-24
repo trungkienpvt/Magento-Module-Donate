@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Plugin\Quote;
+namespace Dev69\DonateService\Plugin\Quote;
 
 use Magento\Quote\Model\Cart\ShippingMethodConverter;
 use Magento\Quote\Api\Data\ShippingMethodInterface;

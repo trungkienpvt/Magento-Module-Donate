@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Block\Adminhtml\Sales\Order\Creditmemo;
+namespace Dev69\DonateService\Block\Adminhtml\Sales\Order\Creditmemo;
 
 class Totals extends \Magento\Framework\View\Element\Template
 {
@@ -26,7 +26,7 @@ class Totals extends \Magento\Framework\View\Element\Template
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
-        \Fidesio\DonateService\Helper\Data $dataHelper,
+        \Dev69\DonateService\Helper\Data $dataHelper,
         array $data = []
     ) {
         $this->_dataHelper = $dataHelper;

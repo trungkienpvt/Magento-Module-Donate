@@ -1,11 +1,11 @@
 <?php
-namespace Fidesio\DonateService\Block\Adminhtml\Form\Field;
+namespace Dev69\DonateService\Block\Adminhtml\Form\Field;
 
 use Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray;
 use Magento\Framework\Data\Form\Element\Text;
 use Magento\Framework\DataObject;
 use Magento\Framework\Exception\LocalizedException;
-use Fidesio\DonateService\Block\Adminhtml\Form\Field\TaxColumn;
+use Dev69\DonateService\Block\Adminhtml\Form\Field\TaxColumn;
 
 /**
  * Class Ranges

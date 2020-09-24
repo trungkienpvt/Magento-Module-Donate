@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Controller\Index;
+namespace Dev69\DonateService\Controller\Index;
 
 use Magento\Framework\App\Action\Context;
 

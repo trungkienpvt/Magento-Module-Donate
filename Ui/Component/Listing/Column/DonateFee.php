@@ -1,5 +1,5 @@
 <?php
-namespace Fidesio\DonateService\Ui\Component\Listing\Column;
+namespace Dev69\DonateService\Ui\Component\Listing\Column;
 
 use \Magento\Sales\Api\OrderRepositoryInterface;
 use \Magento\Framework\View\Element\UiComponent\ContextInterface;

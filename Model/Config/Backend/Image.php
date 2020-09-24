@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Model\Config\Backend;
+namespace Dev69\DonateService\Model\Config\Backend;
 
 class Image extends \Magento\Config\Model\Config\Backend\Image
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Model\Creditmemo\Total;
+namespace Dev69\DonateService\Model\Creditmemo\Total;
 
 use Magento\Sales\Model\Order\Creditmemo\Total\AbstractTotal;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\DonateService\Model\Quote\Total;
+namespace Dev69\DonateService\Model\Quote\Total;
 
 class DonateFee extends \Magento\Quote\Model\Quote\Address\Total\AbstractTotal
 {

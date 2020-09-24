@@ -11,7 +11,7 @@ define([
     return viewModel.extend({
         defaults: {
             displayArea: 'after_details',
-            template: 'Fidesio_DonateService/checkout/summary/item/details/subtotal'
+            template: 'Dev69_DonateService/checkout/summary/item/details/subtotal'
         },
 
         /**

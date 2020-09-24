@@ -1,6 +1,6 @@
 <?php
 
-namespace  Fidesio\DonateService\Setup;
+namespace  Dev69\DonateService\Setup;
 
 use Magento\Customer\Model\Customer;
 use Magento\Customer\Setup\CustomerSetup;
